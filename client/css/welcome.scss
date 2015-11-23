@@ -1,0 +1,26 @@
+@import "base";
+
+/* client/components/welcome.scss */
+.welcome_page {
+  h1 {
+    font-size:50px;
+  }
+  .company_founder {
+    margin-top:20px;
+    img {
+      margin:auto;
+      height:234px;
+      width:180px;
+    }
+  }
+  h1, h2, h3 {
+    color:$baseTextColor;
+  }
+
+  @media (max-width: $screen-xs) {
+    .company_founder img {
+      width:117px;height:90px;
+    }
+  }
+
+}

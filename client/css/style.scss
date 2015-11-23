@@ -1,0 +1,52 @@
+@import "base";
+
+/* client/components/style.scss */
+body {
+  padding-top:50px;
+  font-family: $font-family-base;
+
+  /*remote pesky dotted link in FF*/
+  a:hover, a:active, a:focus, a:link, a:visited {
+    outline: 0;
+    outline: 0 !important;
+    outline-style:none;
+  }
+}
+
+.sidebar {
+  position: fixed;
+  top: 51px;
+  bottom: 0;
+  left: 0;
+  z-index: 1000;
+  display: block;
+  padding: 20px;
+  overflow-x: hidden;
+  overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+  background-color: $sidebarColor;
+  border-right: 1px solid #eee;
+}
+/* Sidebar navigation */
+.nav-sidebar {
+  margin-right: -21px;
+  margin-bottom: 20px;
+  margin-left: -20px;
+}
+.nav-sidebar > li > a {
+  padding-right: 20px;
+  padding-left: 20px;
+  color:#ccc;
+}
+.nav>li>a:focus, .nav>li>a:hover {
+  background-color: $sidebarItemHover;
+}
+
+/* bootstrap overrides */
+.btn-primary {
+  background-color:$baseTextColor;
+  border-color:darken($baseTextColor,10%);
+
+  &:focus, &:active, &:active.focus, &:active:focus, &:hover {
+    background-color:$sidebarItemHover;
+  }
+}
