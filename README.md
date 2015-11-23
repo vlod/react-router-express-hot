@@ -27,7 +27,7 @@ For dev - run node in development mode (uses webpack-hot-middleware):
     # rm -rf public/resources;  # only if you've previous run in production mode
     npm run start
 
-For prod - generate the javascript files into public/js with md5 hashes:
+For prod - generate the javascript files into /public with md5 hashes for css/js:
 
     rm -f public/resources/*; npm run build; NODE_ENV=production npm run start
 
