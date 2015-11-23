@@ -31,7 +31,10 @@ For prod - generate the javascript files into /public with md5 hashes for css/js
 
     rm -f public/resources/*; npm run build; NODE_ENV=production npm run start
 
+Hit
 
+    http://127.0.0.1:3000/
+    
 Authors
 -------
 
