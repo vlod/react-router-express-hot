@@ -5,8 +5,8 @@ require("../css/dinner.scss");
 export default React.createClass({
   render: function() {
     return (
-      <div className="container dinner_page">
-        <div className="col-xs-offset-4 col-xs-8 col-sm-offset-3 col-sm-9 col-md-offset-2 col-md-10">
+      <div className="row dinner_page">
+        <div className="col-xs-12 col-sm-12 col-md-12 col-lg-12">
           <h1>Dinner menu</h1>
         </div>
       </div>

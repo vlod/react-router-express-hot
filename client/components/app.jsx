@@ -11,7 +11,9 @@ export default React.createClass({
       <div>
         <NavBar />
         {this.props.sidebar}
-        {this.props.content}
+        <div className="mainContent">
+          {this.props.content}
+        </div>
      </div>
     )
   }
