@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react'
 
-require("../css/lunch.scss");
+require('../css/lunch.scss');
 
 export default React.createClass({
   render: function() {
@@ -11,5 +11,5 @@ export default React.createClass({
         </div>
       </div>
    );
- },
+ }
 });

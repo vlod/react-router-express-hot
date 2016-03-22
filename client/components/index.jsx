@@ -1,23 +1,21 @@
 'use strict';
-require("../css/style.scss");
+require('../css/style.scss');
 
 if (module.hot) module.hot.accept(); // for hot reloading
 
-import React from "react"
+import React from 'react'
 import { render } from 'react-dom'
 import { createHistory } from 'history'
 import createBrowserHistory from 'history/lib/createBrowserHistory' // https://goo.gl/1CZMd8
-import { Router, Route, Link, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute } from 'react-router'
 
 // app components
-import App from "./app";
-import SideBar from "./sidebar";
-import Welcome from "./welcome";
-import Breakfast from "./breakfast";
-import Lunch from "./lunch";
-import Dinner from "./dinner";
-
-var DefaultRoute = Router.DefaultRoute;
+import App from './app'
+import SideBar from './sidebar'
+import Welcome from './welcome'
+import Breakfast from './breakfast'
+import Lunch from './lunch'
+import Dinner from './dinner'
 
 // IMPORTANT: need to put Routes in a component so hot-loader works correctly
 var Root = React.createClass( {

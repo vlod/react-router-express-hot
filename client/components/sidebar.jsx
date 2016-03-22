@@ -1,7 +1,7 @@
-import React from "react";
+import React from 'react'
 import { Link } from 'react-router'
 
-require("../css/sidebar.scss");
+require('../css/sidebar.scss');
 
 const ACTIVE = { backgroundColor:'green',color:'white' }
 
@@ -33,5 +33,5 @@ export default React.createClass({
         </ul>
       </div>
    );
- },
+ }
 });

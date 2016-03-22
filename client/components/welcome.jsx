@@ -1,8 +1,8 @@
-import React from "react";
+import React from 'react'
 import { Link } from 'react-router'
 
-import zippyImage from "../images/zippy.jpg";
-require("../css/welcome.scss");
+import zippyImage from '../images/zippy.jpg'
+require('../css/welcome.scss');
 
 export default React.createClass({
   render: function() {
@@ -25,5 +25,5 @@ export default React.createClass({
 
       </div>
    );
- },
+ }
 });

@@ -1,13 +1,13 @@
 var express = require('express');
 var path = require('path');
-var favicon = require('serve-favicon');
+// var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 var hoganExpress = require('hogan-express');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+// var users = require('./routes/users');
 
 var app = express();
 app.set('domain', 'dalek.vlod.com');
@@ -21,9 +21,9 @@ app.engine('html',hoganExpress);
 
 if (app.get('env') === 'production') {
   var _resManifest = require('./public/resources/resources-manifest-output.json');
-  app.resourcesManifest = { application_js: _resManifest["application.js"], application_css: _resManifest["application.css"]};
+  app.resourcesManifest = { application_js: _resManifest['application.js'], application_css: _resManifest['application.css']};
 }
-else app.resourcesManifest = { "application_js": "application.js", "application_css": "application.css"};
+else app.resourcesManifest = { 'application_js': 'application.js', 'application_css': 'application.css'};
 
 
 // uncomment after placing your favicon in /public
@@ -46,7 +46,7 @@ app.use('/dinner', routes);
 
 // support hot-loading (only in dev mode) here
 if (app.get('env') === 'development') {
-  console.log("node running in development, using webpack-dev-middleware");
+  console.log('node running in development, using webpack-dev-middleware');
   var webpack = require('webpack');
   var webpackConfig = require('./webpack.config');
   var compiler = webpack(webpackConfig);
@@ -56,7 +56,7 @@ if (app.get('env') === 'development') {
     publicPath:'/resources',
     stats: { colors:true }
   }));
-  app.use(require("webpack-hot-middleware")(compiler, {
+  app.use(require('webpack-hot-middleware')(compiler, {
     log: console.log,  path: '/__webpack_hmr', heartbeat: 10 * 1000
   }));
 }
@@ -73,7 +73,7 @@ app.use(function(req, res, next) {
 // development error handler
 // will print stacktrace
 if (app.get('env') === 'development') {
-  app.use(function(err, req, res, next) {
+  app.use(function(err, req, res /*, next */) {
     res.status(err.status || 500);
     res.render('error', {
       message: err.message,
@@ -84,7 +84,7 @@ if (app.get('env') === 'development') {
 
 // production error handler
 // no stacktraces leaked to user
-app.use(function(err, req, res, next) {
+app.use(function(err, req, res /*, next */) {
   res.status(err.status || 500);
   res.render('error', {
     message: err.message,

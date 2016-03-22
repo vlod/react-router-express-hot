@@ -1,4 +1,4 @@
-import React from "react";
+import React from 'react'
 
 export default React.createClass({
   render: function() {
@@ -22,6 +22,6 @@ export default React.createClass({
         </div>
       </nav>
     );
- },
+ }
 });
 
