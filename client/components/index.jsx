@@ -5,9 +5,7 @@ if (module.hot) module.hot.accept(); // for hot reloading
 
 import React from 'react'
 import { render } from 'react-dom'
-import { createHistory } from 'history'
-import createBrowserHistory from 'history/lib/createBrowserHistory' // https://goo.gl/1CZMd8
-import { Router, Route, IndexRoute } from 'react-router'
+import { Router, Route, IndexRoute, browserHistory } from 'react-router'
 
 // app components
 import App from './app'
@@ -21,7 +19,7 @@ import Dinner from './dinner'
 var Root = React.createClass( {
   render() {
     return (
-      <Router history={createBrowserHistory()}>
+      <Router history={browserHistory}>
         <Route path="/" component={App}>
           <IndexRoute components={{content:Welcome}} />
           <Route path="welcome" components={{content:Welcome}} />

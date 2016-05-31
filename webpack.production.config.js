@@ -1,7 +1,6 @@
 var ExtractTextPlugin = require('extract-text-webpack-plugin');
 var WebpackMd5Hash    = require('webpack-md5-hash');
 var ManifestPlugin    = require('webpack-manifest-plugin');
-var ExtractTextPlugin = require('extract-text-webpack-plugin');
 
 var devConfig = require('./webpack.config.js');
 devConfig.entry.application = ['./index'];
