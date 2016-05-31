@@ -1,18 +1,20 @@
-'use strict';
+import React from 'react';
+import NavBar from './navbar';
 
-import React from 'react'
-import NavBar from './navbar'
+export default function App(props) {
+  return (
+    <div>
+      <NavBar />
+      {props.sidebar}
 
-export default React.createClass({
-  render() {
-    return (
-      <div>
-        <NavBar />
-        {this.props.sidebar}
-        <div className="mainContent">
-          {this.props.content}
-        </div>
-     </div>
-    )
-  }
-});
+      <div className="mainContent">
+        {props.content}
+      </div>
+    </div>
+  );
+}
+
+App.propTypes = {
+  sidebar: React.PropTypes.node.isRequired,
+  content: React.PropTypes.node.isRequired,
+};
