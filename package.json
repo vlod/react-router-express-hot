@@ -11,9 +11,9 @@
     "body-parser": "~1.15",
     "cookie-parser": "~1.4",
     "debug": "~2.2.0",
-    "express": "~4.13.1",
+    "express": "~4.13.4",
     "hogan-express": "^0.5.2",
-    "lodash": "^4.6",
+    "lodash": "^4.13",
     "morgan": "~1.7",
     "react-router": "^2.4.1",
     "serve-favicon": "~2.3.0"
@@ -38,8 +38,8 @@
     "style-loader": "^0.13.0",
     "url-loader": "^0.5.6",
     "webpack": "^1.12.3",
-    "webpack-dev-middleware": "^1.2.0",
-    "webpack-hot-middleware": "^2.4.1",
+    "webpack-dev-middleware": "^1.6.1",
+    "webpack-hot-middleware": "^2.10",
     "webpack-manifest-plugin": "^1.0.1",
     "webpack-md5-hash": "0.0.5"
   }
